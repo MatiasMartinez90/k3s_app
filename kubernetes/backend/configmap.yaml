@@ -1,1 +1,20 @@
+# kubernetes/backend/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: clima-app
+data:
+  CORS_ORIGINS: "https://clima.cloud-it.com.ar"
 
+---
+# kubernetes/backend/secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-secrets
+  namespace: clima-app
+type: Opaque
+data:
+  # Reemplazar con tu clave API codificada en base64
+  weather-api-key: dHVfYXBpX2tleV9hcXVp
